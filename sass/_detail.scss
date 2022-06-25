@@ -33,6 +33,9 @@
             + li {
                 margin-right: 34px;
             }
+            a {
+                @include color(black_color)
+            }
         }
     }
     img {
