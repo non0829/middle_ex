@@ -20,16 +20,24 @@
     .news-flex {
         @include flex;
         width: 90%;
-        margin: 0 auto;
+        margin: 0 auto 50px;
         text-align: left;
         max-width: 1180px;
+        @media screen and (max-width: 900px) {
+            flex-direction: column;
+        }
         article {
-            width: 46.3%;
+            width: 45.5%;
             height: 110px;
             margin-bottom: 20px;
             padding: 10px 15px;
             @include flex;
             @include backColor(light_gray_color);
+            @media screen and (max-width: 900px) {
+                width: 100%;
+                box-sizing: border-box;
+                height: auto;
+            }
             img {
                 width: 103px;
                 height: 100px;

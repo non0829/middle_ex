@@ -28,9 +28,27 @@
         margin: 0 auto 144px;
         text-align: left;
         max-width: 1180px;
+        @media screen and (max-width: 1200px) {
+            flex-direction: column;
+        }
         article {
             width: 331px;
+            @media screen and (max-width: 1200px) {
+                width: 100%;
+                text-align: center;
 
+                img {
+                    width: 100%;
+                    height: auto;
+                    display: block;
+                    max-width: 500px;
+                    margin: 0 auto;
+                }
+
+                + article {
+                    margin-top: 70px;
+                }
+            }
             h3 {
                 font-weight: 400;
                 margin-top: 32px;
@@ -40,6 +58,10 @@
             p {
                 margin-top: 36px;
                 line-height: 32px;
+                @media screen and (max-width: 1200px) {
+                    max-width: 500px;
+                    margin: 32px auto 0px;
+                }
             }
         }
     }

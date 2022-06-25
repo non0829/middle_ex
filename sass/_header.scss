@@ -12,10 +12,26 @@ header {
         .header-left {
             width: 512px;
             @include flex;
-            img {
+            @media screen and (max-width: 900px) {
+                width: 200px;
+            }
+            @media screen and (max-width: 640px) {
+                width: 160px;
+            }
+            .header-image {
                 width: 200px;
                 height: 40px;
                 margin: 20px 0px;
+                @media screen and (max-width: 640px) {
+                    width: 160px;
+                    height: 32px;
+                    margin-top: 26px;
+                }
+                img {
+                    width: 100%;
+                    display: block;
+                    height: auto;
+                }
             }
             ul {
                 display: inline-block;
@@ -29,6 +45,9 @@ header {
                     padding-right: 30px;
                     padding-left: 30px;
                 }
+                @media screen and (max-width: 900px) {
+                    display: none;
+                }
             }
         }
         button {
@@ -40,6 +59,11 @@ header {
             border: none;
             height: 54px;
             margin: 13px 0;
+            @media screen and (max-width: 640px) {
+                width: 150px;
+                height: 45px;
+                margin-top: 20px;
+            }
             img {
                 margin-right: 10px;
                 transform: translateY(5px);
