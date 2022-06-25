@@ -1,0 +1,23 @@
+.sec_visual {
+    position: relative;
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+        min-height: 700px;
+        object-fit: cover;
+        object-position: 70% 50%
+    };
+    .visual_message {
+        @include color(white_color);
+        letter-spacing: 8px;
+        position: absolute;
+        font-weight: 800;
+        top: 33.5%;
+        right: 26.5%;
+        h1 {
+            writing-mode: vertical-rl;
+            line-height: 80px;
+        }
+    }
+}

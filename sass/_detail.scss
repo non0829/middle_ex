@@ -1,0 +1,55 @@
+.sec_detail {
+    min-height: 522px;
+    position: relative;
+    overflow: hidden;
+    font-weight: 400;
+    text-align: center;
+    > img {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        @include z-index(image)
+    }
+}
+
+.detail_content {
+    padding-top: 64px;
+    ul {
+        writing-mode: vertical-rl;
+        margin: 0px auto 96px;
+        text-align: left;
+        li {
+            font-size: 18px;
+            letter-spacing: 10px;
+            list-style: none;
+            + li {
+                margin-right: 34px;
+            }
+        }
+    }
+    img {
+        margin-bottom: 72px;
+    }
+}
+
+.detail_text {
+    margin-bottom: 23px;
+}
+
+.detail_phone {
+    padding-bottom: 61px;
+}
+
+.detail_text p:last-child {
+    letter-spacing: 2px;
+}
+
+.detail_text p, .detail_phone p {
+    display: inline-block;
+    // letter-spacing: 2.88px;
+    &:first-child {
+        padding-right: 20px;
+    }
+}
