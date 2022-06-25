@@ -1,0 +1,49 @@
+header {
+    background-color: rgba(27, 31, 29, 0.514);
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    @include z-index(header);
+    nav {
+        @include flex;
+        padding-left: 20px;
+        padding-right: 20px;
+        height: 100%;
+        .header-left {
+            width: 512px;
+            @include flex;
+            img {
+                width: 200px;
+                height: 40px;
+                margin: 20px 0px;
+            }
+            ul {
+                display: inline-block;
+                list-style: none;
+                margin: 32px 0px;
+                li {
+                    display: inline-block;
+                    @include color(white_color);
+                }
+                li:nth-child(2) {
+                    padding-right: 30px;
+                    padding-left: 30px;
+                }
+            }
+        }
+        button {
+            @include backColor(green_color);
+            @include color(white_color);
+            font-size: 16px;
+            font-weight: bold;
+            width: 170px;
+            border: none;
+            height: 54px;
+            margin: 13px 0;
+            img {
+                margin-right: 10px;
+                transform: translateY(5px);
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+// 変数とMixinの定義ファイル
+
+// 基本的な色指定
+$color : (
+    white_color: #FFFFFF,
+    green_color: #978F10,
+    black_color: #000000,
+    gray_color: #707070,
+    light_gray_color: #F6F6F6
+);
+
+// 色を返す
+@mixin color($key) {
+    color: map-get($color, $key);
+}
+
+@mixin backColor($key) {
+    background-color: map-get($color, $key);
+}
+
+// 基本的なz-indexの値管理
+$z-index : (
+    header: 100,
+    image: -1,
+);
+
+// 色を返す
+@mixin z-index($key) {
+    z-index: map-get($z-index, $key);
+}
+
+@mixin flex {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

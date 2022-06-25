@@ -1,0 +1,54 @@
+.sec_news_container {
+    text-align: center;
+    > img {
+        margin-top: 60px;
+    }
+    h2 {
+        font-weight: 400;
+        margin-top: 20px;
+        margin-bottom: 66px;
+    }
+    ul {
+        @include flex;
+        width: 165px;
+        margin: 0 auto 49px;
+        li {
+            list-style: none;
+            font-size: 16px
+        }
+    }
+    .news-flex {
+        @include flex;
+        width: 90%;
+        margin: 0 auto;
+        text-align: left;
+        max-width: 1180px;
+        article {
+            width: 46.3%;
+            height: 110px;
+            margin-bottom: 20px;
+            padding: 10px 15px;
+            @include flex;
+            @include backColor(light_gray_color);
+            img {
+                width: 103px;
+                height: 100px;
+            }
+            div {
+                width: calc(100% - 30px - 103px);
+                margin-left: 30px;
+                line-height: 32px;
+                .time {
+                    font-size: 14px;
+                    margin-bottom: 10px;
+                    height: 14px;
+                }
+            }
+        }
+    }
+
+    // 表示の出しわけ
+    .hide {
+        display: none;
+    }
+}

@@ -1,12 +1,14 @@
-header {
-    background-color: aquamarine;
-    color: white;
-    p {
-        background-color: blue;
-        color: white;
-        width: 30px;
-        height: 300px;
-        display: flex;
-        text-align: center;
-    }
-}
+@import "define.scss"; // mixinと変数
+@import "reset.scss"; // タグの基本スタイル
+@import "header.scss"; // ヘッダー部分
+@import "visual.scss"; // sec_visual部分
+@import "message.scss"; // sec_message部分
+@import "service.scss"; // sec_service部分
+@import "plan.scss"; // sec_plan部分
+@import "news.scss"; // sec_news部分
+@import "access.scss"; // sec_access部分
+@import "detail.scss"; // sec_detail部分
+@import "footer.scss"; // sec_footer部分
+
+
+
