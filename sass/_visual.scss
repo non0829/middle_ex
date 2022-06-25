@@ -6,7 +6,7 @@
         height: auto;
         min-height: 700px;
         object-fit: cover;
-        object-position: 70% 50%
+        object-position: 65% 50%
     };
     .visual_message {
         @include color(white_color);
@@ -15,9 +15,16 @@
         font-weight: 800;
         top: 33.5%;
         right: 26.5%;
+        @media screen and (max-width: 640px) {
+            top: 30%;
+            right: 15%;
+        }
         h1 {
             writing-mode: vertical-rl;
             line-height: 80px;
+            @media screen and (max-width: 900px) {
+                line-height: 60px;
+            }
         }
     }
 }

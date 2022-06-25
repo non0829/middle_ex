@@ -4,6 +4,9 @@
     overflow: hidden;
     font-weight: 400;
     text-align: center;
+    @media screen and (max-width: 640px) {
+        min-height: 450px;
+    }
     > img {
         position: absolute;
         left: 0;
@@ -20,6 +23,9 @@
         writing-mode: vertical-rl;
         margin: 0px auto 96px;
         text-align: left;
+        @media screen and (max-width: 640px) {
+            margin-bottom: 50px;
+        }
         li {
             font-size: 18px;
             letter-spacing: 10px;
@@ -31,6 +37,9 @@
     }
     img {
         margin-bottom: 72px;
+        @media screen and (max-width: 640px) {
+            margin-bottom: 50px;
+        }
     }
 }
 
