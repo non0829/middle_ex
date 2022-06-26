@@ -14,7 +14,10 @@
         margin: 0 auto 49px;
         li {
             list-style: none;
-            font-size: 16px
+            font-size: 16px;
+            &.news_active {
+                border-bottom: 1px solid #000000;
+            }
         }
     }
     .news-flex {
