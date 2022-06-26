@@ -9,12 +9,13 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
+    <header class=".header">
         <nav>
             <div class="header-left">
                 <div class="header-image">
                     <a href="./index.html">
-                        <img src="./image/top-header-logo.png" alt="ロゴ">
+                        <img src="./image/top-header-logo.png" alt="ロゴ" class="img1">
+                        <img src="./image/sub-header-logo.png" alt="ロゴ" class="img2 disappear">
                     </a>
                 </div>
                 <ul>
@@ -111,11 +112,11 @@
             <img src="./image/logo02.png" alt="">
             <h2>お知らせ</h2>
             <ul>
-                <li>営業情報</li>
-                <li>その他</li>
+                <li class="news_active news_info">営業情報</li>
+                <li class="news_other">その他</li>
             </ul>
             <!-- 営業情報の一覧 -->
-            <div class="news-flex">
+            <div class="news-flex news_info_container">
                 <article>
                     <img src="./image/news01.png" alt="">
                     <div>
@@ -160,7 +161,7 @@
                 </article>
             </div>
             <!-- その他の一覧 -->
-            <div class="news-flex hide">
+            <div class="news-flex news_other_container hide">
                 <article>
                     <img src="./image/news01.png" alt="">
                     <div>
@@ -250,5 +251,8 @@
     <footer>
         <p>Copyright © 石井花壇 All Rights Reserved.</p>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
