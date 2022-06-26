@@ -1,12 +1,22 @@
 .sec_visual {
     position: relative;
+    .sec_visual_image {
+        height: 700px;
+        overflow: hidden;
+        position: relative; 
+    }
     img {
-        display: block;
         width: 100%;
-        height: auto;
-        min-height: 700px;
+        position: absolute;
+        height: 700px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        left: 0;
+        top: 0;
         object-fit: cover;
-        object-position: 65% 50%
+        object-position: 65% 50%;
+        animation: anime 15s linear infinite; 
     };
     .visual_message {
         @include color(white_color);
@@ -26,5 +36,36 @@
                 line-height: 60px;
             }
         }
+    }
+}
+
+// 以下トップページアニメーション実装
+
+@for $num from 1 through 3 {
+    @if $num != 1 {
+        .sec_visual_img#{$num} {
+            -webkit-animation-delay: ($num - 1) * -5s !important;
+            animation-delay: ($num - 1) * -5s !important;
+        }
+    }
+}
+
+@keyframes anime {
+    0% {
+        display: block;
+        opacity: 0.9;
+        z-index: 0;
+    }
+    33.3% {
+        transform: scale(1.2) ;
+        opacity: 1;
+    }
+    40% {
+        opacity: 0;
+    }
+    95% {
+        opacity: 0;
+        transform: scale(1);
+        z-index: -1;
     }
 }
