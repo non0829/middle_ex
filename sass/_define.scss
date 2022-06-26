@@ -20,6 +20,9 @@ $color : (
 
 // 基本的なz-indexの値管理
 $z-index : (
+    btn: 1000,
+    side-menu: 500,
+    back-color: 200,
     header: 100,
     image: -1,
 );
