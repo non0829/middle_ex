@@ -39,6 +39,36 @@ $(".hamburger").click(function () {
     $(".header-back-color").toggleClass('header-back-color-active');
 })
 
-
-// ・宿泊予約のモーダル作成＆カレンダー機能の実装
 // ・要素をフェードインさせる
+$(function () {
+    $(window).on('scroll', function () {
+        const windowHeight = $(window).height();
+        const scroll = $(window).scrollTop();
+
+        $('.element').each(function () {
+        const targetPosition = $(this).offset().top;
+        if (scroll > targetPosition - windowHeight + 100) {
+            $(this).addClass("is-fadein");
+        } else {
+            $(this).removeClass("is-fadein");
+        }
+        });
+    });
+});
+// ここまで
+
+// ・宿泊予約のモーダル作成
+
+// ボタンをクリックしたらモーダルが出現する
+$('#openModal').click(function() {
+    // モーダルの表示、透明度を上げる
+    $('#modalArea').addClass('modal-is-show')
+})
+
+// モーダルの閉じるボタンの実装
+$('#closeModal, #modalBg').click(function() {
+    // モーダルの非表示、透明度をなくす
+    $('#modalArea').removeClass('modal-is-show')
+})
+
+// ここまで

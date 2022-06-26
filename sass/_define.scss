@@ -6,7 +6,9 @@ $color : (
     green_color: #978F10,
     black_color: #000000,
     gray_color: #707070,
-    light_gray_color: #F6F6F6
+    light_gray_color: #F6F6F6,
+    modal_back_color: #707070,
+    modal_color: #797878
 );
 
 // 色を返す
@@ -20,6 +22,7 @@ $color : (
 
 // 基本的なz-indexの値管理
 $z-index : (
+    modal: 10000,
     btn: 1000,
     side-menu: 500,
     back-color: 200,
@@ -37,4 +40,18 @@ $z-index : (
     justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+.element {
+    /* 最初は非表示 */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(30px);
+    transition: opacity 1s, visibility 1s, transform 1s;
+}
+/* フェードイン時に入るクラス */
+.is-fadein {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
 }
