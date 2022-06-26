@@ -34,7 +34,16 @@
 
     <section class="sec_about">
         <div class="about_container">
-            <p class="pankuzu">トップ > お料理</p>
+            <ul class="breadcrumb__list" itemscope itemtype="https://schema.org/BreadcrumbList">
+                <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" href="./index.html"><span itemprop="name">トップ</span></a>
+                    <meta itemprop="position" content="1" />
+                </li>
+                <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" href="./food.html"><span itemprop="name">お料理</span></a>
+                    <meta itemprop="position" content="2" />
+                </li>
+            </ul>
             <p class="about_description">地元熱海の市場で仕入れた食材のみを使った食材をふんだんに使い、<br>大将の技が光る「熱海料理」<br>四季ごと、日ごとに変化する味わいを、どうぞご堪能ください。</p>
             <article>
                 <div class="about_image">
