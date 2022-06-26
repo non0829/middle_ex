@@ -1,4 +1,4 @@
-// 
+// トップページのヘッダーのみスクロールしたら変更する
 $(window).scroll(function () {
     if($(window).scrollTop() > 20) {
         $("header > nav").addClass('scrolled');
@@ -11,7 +11,9 @@ $(window).scroll(function () {
     }
     console.log('hello')
 });
+// ここまで
 
+// トップページのお知らせのタブ機能
 $(".news_info").click(function () {
     $(".news_other").removeClass('news_active');
     $(this).addClass('news_active');
@@ -25,3 +27,11 @@ $(".news_other").click(function () {
     $(".news_info_container").addClass('hide');
     $(".news_other_container").removeClass('hide');
 })
+// ここまで
+
+// ・トップページの写真のアニメーション＆ズームアップ
+
+
+// ・ハンバーガーメニューの実装
+// ・宿泊予約のモーダル作成＆カレンダー機能の実装
+// ・要素をフェードインさせる
