@@ -55,3 +55,8 @@ $z-index : (
     visibility: visible;
     transform: translateX(0);
 }
+
+// ボタンホバー時に透明にする
+button:hover {
+    opacity: 0.8;
+}

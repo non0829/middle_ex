@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>石井花壇 | 温海温泉旅館【公式サイト】</title>
+    <title>料理 - 石井花壇 | 温海温泉旅館【公式サイト】</title>
+    <meta name="robots" content="noindex">
     <meta name="description" content="日本古来の素材と現代的表現を併せ持つ温泉旅館、石井花壇。伝統的「和」の息づく空間で、至極のひとときをお過ごしください。">
     <link rel="stylesheet" href="css/content.css">
-    <link rel="icon" href="./image/logo02.png">
+    <link rel="icon" href="./image/logo02.jpg">
+    <!-- 以下flatpickrの実装 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ja.js"></script>
 </head>
 <body>
     <header class="header-sub">
@@ -15,7 +20,7 @@
             <div class="header-left">
                 <div class="header-image">
                     <a href="./index.html">
-                        <img src="./image/sub-header-logo.png" alt="ロゴ">
+                        <img src="./image/sub-header-logo.jpg" alt="ロゴ">
                     </a>
                 </div>
                 <ul>
@@ -24,7 +29,7 @@
                     <li><a href="./onsen.html">温泉</a></li>
                 </ul>
             </div>
-            <button><img src="./image/calender.png" alt="カレンダー">宿泊予約</button>
+            <button id="openModal"><img src="./image/calender.png" alt="カレンダー">宿泊予約</button>
             <button type="button" id="js-hamburger" class="button hamburger">
                 <span class="hamburger__line">
                 </span>
@@ -32,7 +37,7 @@
         </nav>
         <div class="sp-global-menu">
             <div class="sp-global-menu-inner">
-                <img src="./image/bg.png" alt="">
+                <img src="./image/bg.jpg" alt="">
                 <nav>
                     <ul>
                         <li><a href="./room.html">お部屋</a></li>
@@ -43,10 +48,46 @@
             </div>
         </div>
         <div class="header-back-color"></div>
+        <!-- モーダルエリアここから -->
+        <section id="modalArea" class="modalArea">
+            <div id="modalBg" class="modalBg"></div>
+            <div class="modalWrapper">
+                <div class="modalContents">
+                    <h2>宿泊予約</h2>
+                    <form action="#">
+                        <div>
+                            <label for="name">お名前</label>
+                            <input name="name" type="text" placeholder="例：石井正悟">
+                        </div>
+                        <div>
+                            <label for="email">メールアドレス</label>
+                            <input name="email" type="email" placeholder="例：Example@example.com">
+                        </div>
+                        <div>
+                            <label for="plan">ご希望プラン（空いているプランのみ表示されます）</label>
+                            <select name="plan">
+                                <option value="">プランを選択してください</option>
+                                <option value="plan1">【期間限定】海辺の四季旬彩、贅沢美味懐石プラン</option>
+                                <option value="plan2">平日に優雅に楽しむ、特別宿泊プラン</option>
+                                <option value="plan3">絶景貸切露天と個室会席を満喫できるファミリープラン</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="time">日時選択</label>
+                            <input name="time" type="text" id="flatpickr" placeholder="日時を選択してください">
+                        </div>
+                        <input type="submit" value="送信する" class="modal_btn">
+                    </form>
+                </div>
+                <div id="closeModal" class="closeModal">
+                    ×
+                </div>
+            </div>
+        </section>
     </header>
 
     <section class="sec_picture">
-        <img src="./image/menu-top.png" alt="">
+        <img src="./image/menu-top.jpg" alt="">
         <h1>お料理</h1>
     </section>
 
@@ -62,14 +103,14 @@
                     <meta itemprop="position" content="2" />
                 </li>
             </ul>
-            <p class="about_description">地元熱海の市場で仕入れた食材のみを使った食材をふんだんに使い、<br>大将の技が光る「熱海料理」<br>四季ごと、日ごとに変化する味わいを、どうぞご堪能ください。</p>
+            <p class="about_description element">地元熱海の市場で仕入れた食材のみを使った食材をふんだんに使い、<br>大将の技が光る「熱海料理」<br>四季ごと、日ごとに変化する味わいを、どうぞご堪能ください。</p>
             <article class="element">
                 <div class="about_image">
-                    <img src="./image/menu01.png" alt="">
+                    <img src="./image/menu01.jpg" alt="">
                 </div>
                 <div class="about_content_box">
                     <div class="about_content">
-                        <img src="./image/bg.png" alt="">
+                        <img src="./image/bg.jpg" alt="">
                         <div class="about_text">
                             <h2>地元食材にこだわった会席料理</h2>
                             <p>みずみずしくほのかに甘い野菜、新鮮で味に深みがある魚介類、肉類。<br>旬の素材をそのままに生かす、経験に裏打ちされた確かな技。<br>四季ごと、日ごとに変化する味わいを、どうぞご堪能ください。</p>
@@ -79,11 +120,11 @@
             </article>
             <article class="element">
                 <div class="about_image">
-                    <img src="./image/menu02.png" alt="">
+                    <img src="./image/menu02.jpg" alt="">
                 </div>
                 <div class="about_content_box">
                     <div class="about_content">
-                        <img src="./image/bg.png" alt="">
+                        <img src="./image/bg.jpg" alt="">
                         <div class="about_text">
                             <h2>熱海の漁港で目利きの品を</h2>
                             <p>石井花壇でお出しする料理はすべて料理長である大将の目利きで、<br>熱海の魚市場でその日のうちに仕入れたものを使用しております。<br>日本海の宝玉を十分にお楽しみください。</p>
@@ -93,11 +134,11 @@
             </article>
             <article class="element">
                 <div class="about_image">
-                    <img src="./image/menu03.png" alt="">
+                    <img src="./image/menu03.jpg" alt="">
                 </div>
                 <div class="about_content_box">
                     <div class="about_content">
-                        <img src="./image/bg.png" alt="">
+                        <img src="./image/bg.jpg" alt="">
                         <div class="about_text">
                             <h2>食材が一流、職人も一流</h2>
                             <p>石井花壇の料理人は料亭で20年経験を積んだものばかり。<br>その時の最も旬な食材を、最高の調理でお届けします。<br>また、お料理への細かいご要望にもお答えできますので、<br>お気軽にお申し付けください。</p>
@@ -109,7 +150,7 @@
     </section>
 
     <section class="sec_detail">
-        <img src="./image/bg3.png" alt="">
+        <img src="./image/bg3.jpg" alt="">
         <div class="detail_content element">
             <ul>
                 <li><a href="./room.html">お部屋</a></li>
