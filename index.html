@@ -5,9 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>石井花壇 | 温海温泉旅館【公式サイト】</title>
+    <meta name="robots" content="noindex">
     <meta name="description" content="日本古来の素材と現代的表現を併せ持つ温泉旅館、石井花壇。伝統的「和」の息づく空間で、至極のひとときをお過ごしください。">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="./image/logo02.png">
+    <link rel="icon" href="./image/logo02.jpg">
+    <!-- 以下flatpickrの実装 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ja.js"></script>
 </head>
 <body>
 
@@ -17,7 +22,7 @@
                 <div class="header-image">
                     <a href="./index.html">
                         <img src="./image/top-header-logo.png" alt="ロゴ" class="img1">
-                        <img src="./image/sub-header-logo.png" alt="ロゴ" class="img2 disappear">
+                        <img src="./image/sub-header-logo.jpg" alt="ロゴ" class="img2 disappear">
                     </a>
                 </div>
                 <ul>
@@ -34,7 +39,7 @@
         </nav>
         <div class="sp-global-menu">
             <div class="sp-global-menu-inner">
-                <img src="./image/bg.png" alt="">
+                <img src="./image/bg.jpg" alt="">
                 <nav>
                     <ul>
                         <li><a href="./room.html">お部屋</a></li>
@@ -71,9 +76,7 @@
                         </div>
                         <div>
                             <label for="time">日時選択</label>
-                            <select name="time">
-                                <option value="">日時を選択してください</option>
-                            </select>
+                            <input name="time" type="text" id="flatpickr" placeholder="日時を選択してください">
                         </div>
                         <input type="submit" value="送信する" class="modal_btn">
                     </form>
@@ -87,7 +90,7 @@
 
     <section class="sec_visual">
         <div class="sec_visual_image">
-            <img src="./image/mainbg01.png" alt="メイン写真" class="sec_visual_img1">
+            <img src="./image/mainbg01.jpg" alt="メイン写真" class="sec_visual_img1">
             <img src="./image/mainbg02.jpg" alt="メイン写真" class="sec_visual_img2">
             <img src="./image/mainbg03.jpg" alt="メイン写真" class="sec_visual_img3">
         </div>
@@ -97,7 +100,7 @@
     </section>
 
     <section class="sec_message">
-        <img src="./image/bg.png" alt="背景">
+        <img src="./image/bg.jpg" alt="背景">
         <div class="message_container element">
             <h2>温海温泉の</h2>
             <h2>美しさに癒やされて</h2>
@@ -112,7 +115,7 @@
         <div class="service-container">
             <div class="service element">
                 <div class="service-image">
-                    <img src="./image/oheya-top.png" alt="">
+                    <img src="./image/oheya-top.jpg" alt="">
                 </div>
                 <div class="service-text">
                     <h2>喧騒から離れた空間<br>心落ち着く至極のひととき</h2>
@@ -122,7 +125,7 @@
             </div>
             <div class="service element">
                 <div class="service-image">
-                    <img src="./image/menu-top.png" alt="">
+                    <img src="./image/menu-top.jpg" alt="">
                 </div>
                 <div class="service-text">
                     <h2>出迎えるのは<br>極上の温海料理</h2>
@@ -132,7 +135,7 @@
             </div>
             <div class="service element">
                 <div class="service-image">
-                    <img src="./image/onsen-top.png" alt="">
+                    <img src="./image/onsen-top.jpg" alt="">
                 </div>
                 <div class="service-text">
                     <h2>疲れ切った身体にやすらぎを<br>温海の源泉に癒やされて</h2>
@@ -144,23 +147,23 @@
     </section>
 
     <section class="sec_plan">
-        <img src="./image/bg02.png" alt="">
+        <img src="./image/bg02.jpg" alt="">
         <div class="sec_plan_container">
             <img src="./image/logo02.png" alt="">
             <h2>おすすめご宿泊プラン</h2>
             <div class="plan-flex">
                 <article class="element">
-                    <img src="./image/recommended01.png" alt="">
+                    <img src="./image/recommended01.jpg" alt="">
                     <h3>朝食付きプラン、日本近海で取れたのどぐろを朝食として…</h3>
                     <p>最高級と称されるのどぐろ、正式には「アカムツ」と呼ばれる魚、味は独特の上品な味わいで、焼いても煮ても美味</p>
                 </article>
                 <article class="element">
-                    <img src="./image/recommended02.png" alt="">
+                    <img src="./image/recommended02.jpg" alt="">
                     <h3>【期間限定】熱海蟹をたっぷりと愉しむプラン。</h3>
                     <p>温海で水揚げされた蟹は「温海蟹」として知られ、嗜好品として愛されてきました。この宿泊プランでは存分に</p>
                 </article>
                 <article class="element">
-                    <img src="./image/recommended03.png" alt="">
+                    <img src="./image/recommended03.jpg" alt="">
                     <h3>【平日限定】贅沢美味懐石プラン。 海辺の四季旬彩プラン。</h3>
                     <p>熱海近海で取れた魚を鮮度そのままに舟盛りにしてご提供。生きた味をお楽しみください。</p>
                 </article>
@@ -179,42 +182,42 @@
             <!-- 営業情報の一覧 -->
             <div class="news-flex news_info_container">
                 <article>
-                    <img src="./image/news01.png" alt="">
+                    <img src="./image/news01.jpg" alt="">
                     <div>
                         <p class="time">2020.12.24</p>
                         <p>年末最後の営業日は27日になります。</p>
                     </div>
                 </article>
                 <article>
-                    <img src="./image/news02.png" alt="">
+                    <img src="./image/news02.jpg" alt="">
                     <div>
                         <p class="time">2020.12.24</p>
                         <p>年末最後の営業日のお知らせ</p>
                     </div>
                 </article>
                 <article>
-                    <img src="./image/news02.png" alt="">
+                    <img src="./image/news02.jpg" alt="">
                     <div>
                         <p class="time">2020.12.11</p>
                         <p>12.21は臨時休業とさせていただきますので、よろしくお願いします。</p>
                     </div>
                 </article>
                 <article>
-                    <img src="./image/news01.png" alt="">
+                    <img src="./image/news01.jpg" alt="">
                     <div>
                         <p class="time">2020.12.24</p>
                         <p>年末最後の営業日のお知らせ</p>
                     </div>
                 </article>
                 <article>
-                    <img src="./image/news01.png" alt="">
+                    <img src="./image/news01.jpg" alt="">
                     <div>
                         <p class="time">2020.12.01</p>
                         <p>和室の改装を行いますため、12.10はお休みさせていただきます。</p>
                     </div>
                 </article>
                 <article>
-                    <img src="./image/news02.png" alt="">
+                    <img src="./image/news02.jpg" alt="">
                     <div>
                         <p class="time">2020.12.24</p>
                         <p>年末最後の営業日のお知らせ</p>
@@ -224,35 +227,35 @@
             <!-- その他の一覧 -->
             <div class="news-flex news_other_container hide">
                 <article>
-                    <img src="./image/news01.png" alt="">
+                    <img src="./image/news01.jpg" alt="">
                     <div>
                         <p class="time">2020.12.24</p>
                         <p>年末最後の営業日は27日になります。</p>
                     </div>
                 </article>
                 <article>
-                    <img src="./image/news02.png" alt="">
+                    <img src="./image/news02.jpg" alt="">
                     <div>
                         <p class="time">2020.12.24</p>
                         <p>年末最後の営業日のお知らせ</p>
                     </div>
                 </article>
                 <article>
-                    <img src="./image/news02.png" alt="">
+                    <img src="./image/news02.jpg" alt="">
                     <div>
                         <p class="time">2020.12.11</p>
                         <p>12.21は臨時休業とさせていただきますので、よろしくお願いします。</p>
                     </div>
                 </article>
                 <article>
-                    <img src="./image/news01.png" alt="">
+                    <img src="./image/news01.jpg" alt="">
                     <div>
                         <p class="time">2020.12.01</p>
                         <p>和室の改装を行いますため、12.10はお休みさせていただきます。</p>
                     </div>
                 </article>
                 <article>
-                    <img src="./image/news02.png" alt="">
+                    <img src="./image/news02.jpg" alt="">
                     <div>
                         <p class="time">2020.12.24</p>
                         <p>年末最後の営業日のお知らせ</p>
@@ -263,13 +266,13 @@
     </section>
 
     <section class="sec_access">
-        <img src="./image/bg.png" alt="">
+        <img src="./image/bg.jpg" alt="">
         <div class="sec_access_container">
             <img src="./image/logo02.png" alt="">
             <h2>アクセス</h2>
             <div class="access_info element">
                 <div class="access_info_img">
-                    <img src="./image/acess.png" alt="">
+                    <img src="./image/acess.jpg" alt="">
                 </div>
                 <div class="access_info_text">
                     <h3>住所</h3>
@@ -290,7 +293,7 @@
     </section>
 
     <section class="sec_detail">
-        <img src="./image/bg3.png" alt="">
+        <img src="./image/bg3.jpg" alt="">
         <div class="detail_content element">
             <ul>
                 <li><a href="./room.html">お部屋</a></li>

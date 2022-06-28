@@ -72,3 +72,10 @@ $('#closeModal, #modalBg').click(function() {
 })
 
 // ここまで
+
+// カレンダー機能作成
+flatpickr("#flatpickr", {
+    locale:"ja", // 日本語化する
+    minDate:"today", // 当日以降を選択できるようにする
+    mode: "range", // 複数選択可能
+});
